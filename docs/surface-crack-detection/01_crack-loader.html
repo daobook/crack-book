@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>‎Kaggle 表面裂纹数据</title>
+    <title>桥梁裂缝检测</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -85,8 +85,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -94,12 +92,12 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/crack-book/docs/surface-crack-detection/00_kaggle-surface-crack.html" />
+    <link rel="canonical" href="https://xinetzone.github.io/crack-book/docs/surface-crack-detection/01_crack-loader.html" />
     <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="桥梁裂缝检测" href="01_crack-loader.html" />
-    <link rel="prev" title="‎表面裂纹检测" href="index.html" />
+    <link rel="next" title="关于" href="../about/index.html" />
+    <link rel="prev" title="‎Kaggle 表面裂纹数据" href="00_kaggle-surface-crack.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -143,13 +141,13 @@ commentsRunWhenDOMLoaded(addUtterances);
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_kaggle-surface-crack.html">
      ‎Kaggle 表面裂纹数据
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="01_crack-loader.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      桥梁裂缝检测
     </a>
    </li>
@@ -270,9 +268,9 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/surface-crack-detection/00_kaggle-surface-crack.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/surface-crack-detection/01_crack-loader.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -290,7 +288,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/crack-book/issues/new?title=Issue%20on%20page%20%2Fdocs/surface-crack-detection/00_kaggle-surface-crack.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/crack-book/issues/new?title=Issue%20on%20page%20%2Fdocs/surface-crack-detection/01_crack-loader.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -306,29 +304,36 @@ commentsRunWhenDOMLoaded(addUtterances);
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/crack-book/main?urlpath=tree/./docs/surface-crack-detection/01_crack-loader.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/xinetzone/crack-book/blob/main/./docs/surface-crack-detection/01_crack-loader.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   数据集简介
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id5">
-   数据集使用
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -337,30 +342,56 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="kaggle">
-<h1>‎Kaggle 表面裂纹数据<a class="headerlink" href="#kaggle" title="永久链接至标题">¶</a></h1>
-<p>参考：<a class="reference external" href="https://www.kaggle.com/arunrk7/surface-crack-detection">Surface Crack Detection | Kaggle</a></p>
-<div class="section" id="id1">
-<h2>数据集简介<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p>混凝土表面裂缝是土木结构的主要缺陷。建筑物检测是为了评估建筑物的刚度和抗拉强度。裂缝检测在建筑检测中起着重要作用，发现裂缝并确定建筑健康。</p>
-<p>这些数据集包含有裂缝和无裂缝的各种混凝土表面的图像。图像数据被分为阴性（negative，无裂缝）和阳性（positive，有裂缝）两类，分别放在不同的文件夹中进行图像分类。每个类别都有 <span class="math notranslate nohighlight">\(20\,000\)</span> 张图像，总共有 <span class="math notranslate nohighlight">\(40\,000\)</span> 张 <span class="math notranslate nohighlight">\(227 \times 227\)</span> 像素的 RGB 通道图像。该数据集由 458 张高分辨率图像（<span class="math notranslate nohighlight">\(4032 \times 3024\)</span> 像素）产生，采用 <span id="id2">[<a class="reference internal" href="../about/zreferences.html#id3">Zhang <em>et al.</em>, 2016</a>]</span> 提出的方法。高分辨率图像在表面处理和光照条件方面发现有很高的差异性。没有应用随机旋转或翻转或倾斜的数据增强。</p>
-<p>该数据集取自 <a class="reference external" href="https://data.mendeley.com/datasets/5y9wdsg2zt/2">Mendeley Data - Crack Detection</a> 网站，由 Çağlar Fırat Özgenel 贡献。引用自：<span id="id3">[<a class="reference internal" href="../about/zreferences.html#id4">Özgenel and Sorguç, 2018</a>]</span> 和 <span id="id4">[<a class="reference internal" href="../about/zreferences.html#id5">Özgenel, 2019</a>]</span>。</p>
-</div>
-<div class="section" id="id5">
-<h2>数据集使用<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<p>参考：<a class="reference external" href="https://xinetzone.github.io/sanstyle-book/docs/basics/kaggle.html">Kaggle 命令行工具 (xinetzone.github.io)</a> 配置 Kaggle API 到本地。</p>
-<p>可以直接获取 Kaggle 数据的根目录：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kaggle_root</span><span class="p">():</span>
-    <span class="kn">import</span> <span class="nn">kaggle</span>
-    <span class="n">config_values</span> <span class="o">=</span> <span class="n">kaggle</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">config_values</span>
-    <span class="n">root</span> <span class="o">=</span> <span class="n">config_values</span><span class="p">[</span><span class="s1">&#39;path&#39;</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">root</span>
+  <div class="section" id="id1">
+<h1>桥梁裂缝检测<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>下载数据集：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>kaggle datasets download -d xinzone/surface-crack
 </pre></div>
 </div>
-<p>如果下载下来的数据是 Zip 文件，可以使用如下类直接读取图片：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
+<p>回到根目录：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../..</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E:\kaggle\crack-book
+</pre></div>
+</div>
+</div>
+</div>
+<p>获取数据集的根目录：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">apps.dataset</span> <span class="kn">import</span> <span class="n">kaggle_root</span>
+<span class="c1"># 获取数据根目录</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">kaggle_root</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/datasets/xinzone/surface-crack/surface-crack.zip&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>读取图片：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="k">def</span> <span class="nf">name2bunch</span><span class="p">(</span><span class="n">namelist</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;将 namelist 转换为 bunch&#39;&#39;&#39;</span>
+    <span class="n">name_bunch</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">namelist</span><span class="p">:</span>
+        <span class="n">ns</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+        <span class="n">name_type</span> <span class="o">=</span> <span class="n">ns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">name_type</span> <span class="o">==</span> <span class="s1">&#39;predict&#39;</span><span class="p">:</span>
+            <span class="n">name_bunch</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">name_type</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="n">ns</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">name_bunch</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">name_type</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="n">label</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">name_bunch</span>
+
 
 <span class="k">class</span> <span class="nc">ZipImage</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Z</span><span class="p">):</span>
@@ -368,36 +399,61 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="sd">        Z: 图片的 ZipFile 对象</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Z</span> <span class="o">=</span> <span class="n">Z</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name_bunch</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="o">.</span><span class="n">namelist</span><span class="p">()}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name_bunch</span> <span class="o">=</span> <span class="n">name2bunch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="o">.</span><span class="n">namelist</span><span class="p">())</span>
 
     <span class="k">def</span> <span class="nf">array</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;获取给定的 name 的图片像素信息&#39;&#39;&#39;</span>
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
             <span class="k">with</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="k">as</span> <span class="n">im</span><span class="p">:</span>
                 <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">img</span>
 
-    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">name_bunch</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="n">img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-            <span class="k">yield</span> <span class="n">img</span><span class="p">,</span> <span class="n">label</span>
+    <span class="k">def</span> <span class="nf">split</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_type</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        data_type: &#39;test&#39;, &#39;train&#39;, &#39;valid&#39;, &#39;predict&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">ns</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">name_bunch</span><span class="p">[</span><span class="n">data_type</span><span class="p">]:</span> 
+            <span class="k">if</span> <span class="n">ns</span> <span class="o">==</span> <span class="s1">&#39;predict&#39;</span><span class="p">:</span>
+                <span class="n">img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
+                <span class="k">yield</span> <span class="n">img</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">name</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">ns</span>
+                <span class="n">img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+                <span class="k">yield</span> <span class="n">img</span><span class="p">,</span> <span class="n">label</span>
 </pre></div>
 </div>
-<p>下载数据集：</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>kaggle datasets download -d arunrk7/surface-crack-detection
-</pre></div>
 </div>
-<p>获取数据集的根目录：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="n">kaggle_root</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/datasets/arunrk7/surface-crack-detection/surface-crack-detection.zip&#39;</span>
-</pre></div>
 </div>
-<p>读取图片：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">ZipFile</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">ZipFile</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+
 <span class="n">I</span> <span class="o">=</span> <span class="n">ZipImage</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">img</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">I</span><span class="p">:</span>
-    <span class="k">break</span>
+
+<span class="n">train</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;train&#39;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+<span class="n">valid</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;valid&#39;</span><span class="p">)</span>
+<span class="n">predict</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;predict&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>这里 <code class="docutils literal notranslate"><span class="pre">img</span></code>，<code class="docutils literal notranslate"><span class="pre">label</span></code> 分别是图片的数据及其标签。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">img</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">train</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+    <span class="k">break</span>
+
+<span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Negative
+</pre></div>
+</div>
+<img alt="../../_images/01_crack-loader_7_1.png" src="../../_images/01_crack-loader_7_1.png" />
+</div>
 </div>
 </div>
 
@@ -410,16 +466,16 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "tf"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "tf",
             path: "./docs/surface-crack-detection"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'tf'</script>
 
               </div>
               
@@ -431,19 +487,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="index.html" title="上一页 页">
+        <a class="left-prev" href="00_kaggle-surface-crack.html" title="上一页 页">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">上一页</p>
-                <p class="prevnext-title">‎表面裂纹检测</p>
+                <p class="prevnext-title">‎Kaggle 表面裂纹数据</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="01_crack-loader.html" title="下一页 页">
+        <a class="right-next" href="../about/index.html" title="下一页 页">
             <div class="prevnext-info">
                 <p class="prevnext-label">下一页</p>
-                <p class="prevnext-title">桥梁裂缝检测</p>
+                <p class="prevnext-title">关于</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

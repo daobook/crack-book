@@ -69,7 +69,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/sanstyle-starter");
+    script.setAttribute("repo", "xinetzone/crack-book");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -92,7 +92,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/sanstyle-starter/docs/about/zreferences.html" />
+    <link rel="canonical" href="https://xinetzone.github.io/crack-book/docs/about/zreferences.html" />
     <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
@@ -133,7 +133,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../README.html">
-   Sanstyle Strater
+   缺陷检测与分类
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -178,8 +178,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../topics/index.html">
-   主题1
+  <a class="reference internal" href="../surface-crack-detection/index.html">
+   ‎表面裂纹检测
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -188,8 +188,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../topics/topic.html">
-     某个主题
+    <a class="reference internal" href="../surface-crack-detection/00_kaggle-surface-crack.html">
+     ‎Kaggle 表面裂纹数据
     </a>
    </li>
   </ul>
@@ -373,11 +373,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/sanstyle-starter"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/xinetzone/crack-book"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/sanstyle-starter/issues/new?title=Issue%20on%20page%20%2Fdocs/about/zreferences.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/crack-book/issues/new?title=Issue%20on%20page%20%2Fdocs/about/zreferences.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -408,13 +408,25 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
   <div class="section" id="id1">
 <h1>参考文献<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<span class="target" id="id2"></span></div>
+<p id="id2"><dl class="citation">
+<dt class="label" id="id3"><span class="brackets">ZYDZZ16</span></dt>
+<dd><p>Lei Zhang, Fan Yang, Yimin Daniel Zhang, and Ying Julie Zhu. Road crack detection using deep convolutional neural network. In <em>2016 IEEE International Conference on Image Processing (ICIP)</em>, volume, 3708–3712. 2016. <a class="reference external" href="https://doi.org/10.1109/ICIP.2016.7533052">doi:10.1109/ICIP.2016.7533052</a>.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets">OS18</span></dt>
+<dd><p>Ç. F. [0000-0001-8443-8584] (METU) Özgenel and Arzu Gönenç [0000-0001-9603-0340] (METU) Sorguç. Performance comparison of pretrained convolutional neural networks on crack detection in buildings. In Jochen Teizer, editor, <em>Proceedings of the 35th International Symposium on Automation and Robotics in Construction (ISARC)</em>, 693–700. Taipei, Taiwan, July 2018. International Association for Automation and Robotics in Construction (IAARC). <a class="reference external" href="https://doi.org/10.22260/ISARC2018/0094">doi:10.22260/ISARC2018/0094</a>.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets">Ozg19</span></dt>
+<dd><p>Çağlar Fırat Özgenel. Concrete crack images for classification. In <em>Mendeley Data, v2</em>. 2019. <a class="reference external" href="https://doi.org/10.17632/5y9wdsg2zt.2">doi:10.17632/5y9wdsg2zt.2</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "xinetzone/sanstyle-starter",
+            repo: "xinetzone/crack-book",
             ref: "main",
         },
         codeMirrorConfig: {

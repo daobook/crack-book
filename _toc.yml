@@ -13,9 +13,9 @@ parts:
 
 - caption: 主题
   chapters:
-  - file: docs/topics/index
+  - file: docs/surface-crack-detection/index
     sections:
-    - glob: docs/topics/**
+    - glob: docs/surface-crack-detection/**
 
 - caption: 原理
   chapters:

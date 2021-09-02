@@ -16,7 +16,7 @@ bibtex_bibfiles:
 execute:
   execute_notebooks: cache # 是否在构建时执行笔记本。必须是 ("auto", "force", "cache", "off") 之一
   cache: "" # jupyter 的缓存路径，该路径将用于存储执行工件。 `_build/.jupyter_cache/`
-  exclude_patterns: [] # 在执行中要“跳过”的模式列表（例如，需要很长时间的笔记本）
+  exclude_patterns: ["*.ipynb"] # 在执行中要“跳过”的模式列表（例如，需要很长时间的笔记本）
   timeout: -1 # 每个笔记本单元允许运行的最长时间（以秒为单位）。
   # 如果为 `true`，则将创建一个临时目录并将其用作命令工作目录（cwd），否则，笔记本的父目录将是 cwd。
   run_in_temp: false
@@ -80,8 +80,6 @@ launch_buttons:
   thebe: true
 
 parse:
-  myst_substitutions:
-    sub3: My _global_ value!
   myst_enable_extensions: # 在 myst 解析器中启用的默认扩展。参考 https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
     - amsmath # 启用解析 LaTeX 样式的数学块
     - colon_fence # 启用 ::: 防护栅栏，以便使其更易于在不支持 MyST 的界面中呈现
